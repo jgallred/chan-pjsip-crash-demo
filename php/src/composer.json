@@ -1,0 +1,19 @@
+{
+  "name": "is/test-pjsip",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Jason Allred",
+      "email": "jallred@insidesales.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "app\\": "src/"
+    }
+  },
+  "require": {
+    "marcelog/pami": "^2.0"
+  }
+}

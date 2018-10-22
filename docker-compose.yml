@@ -1,0 +1,15 @@
+version: '2'
+services:
+  asterisk:
+    privileged: true
+    build: ./asterisk/
+    volumes:
+    - ./asterisk/tmp/:/tmp/
+    command: ["tail","-f","/dev/null"]
+  php:
+    build: ./php/
+    links:
+      - asterisk
+    volumes:
+      - ./php/src/:/app/
+    command: ["tail","-f","/dev/null"]
